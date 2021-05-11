@@ -59,6 +59,22 @@ export default function App() {
     }
   }, [obstaclesLeft]);
 
+  //start second obstacle
+  useEffect(() => {
+    if (obstaclesLeftTwo > -60) {
+      obstaclesTimerIdTwo = setInterval(() => {
+        setObstaclesLeftTwo((obstaclesLeftTwo) => obstaclesLeftTwo - 5);
+      }, 30);
+      return () => {
+        clearInterval(obstaclesTimerIdTwo);
+      };
+    } else {
+      setScore((score) => score + 1);
+      setObstaclesLeftTwo(screenWidth);
+      setObstaclesNegHeightTwo(-Math.random() * 100);
+    }
+  }, [obstaclesLeftTwo]);
+
   return (
     <View style={styles.container}>
       <Bird birdBottom={BirdBottom} birdLeft={birdLeft} />
@@ -69,6 +85,14 @@ export default function App() {
         randomBottom={obstaclesNegHeight}
         gap={gap}
         obstaclesLeft={obstaclesLeft}
+      />
+      <Obstacles
+        color={"yellow"}
+        obstacleWidth={obstacleWidth}
+        obstacleHeight={obstacleHeight}
+        randomBottom={obstaclesNegHeightTwo}
+        gap={gap}
+        obstaclesLeft={obstaclesLeftTwo}
       />
     </View>
   );
