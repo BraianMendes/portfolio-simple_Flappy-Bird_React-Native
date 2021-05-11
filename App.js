@@ -45,15 +45,18 @@ export default function App() {
 
   // start first obstacle
   useEffect(() => {
-    if (obstaclesLeft > 0) {
+    if (obstaclesLeft > -60) {
       obstaclesTimerId = setInterval(() => {
         setObstaclesLeft((obstaclesLeft) => obstaclesLeft - 5);
       }, 30);
+      return () => {
+        clearInterval(obstaclesTimerId);
+      };
+    } else {
+      setScore((score) => score + 1);
+      setObstaclesLeft(screenWidth);
+      setObstaclesNegHeight(-Math.random() * 100);
     }
-
-    return () => {
-      clearInterval(obstaclesTimerId);
-    };
   }, [obstaclesLeft]);
 
   return (
