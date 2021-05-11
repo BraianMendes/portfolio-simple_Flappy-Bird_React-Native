@@ -8,7 +8,7 @@
 
 <p align="center">
 
-<img src="https://img.shields.io/badge/Made%20With-React-Native-61DAFB?logo=react&style=for-the-badge">
+<img src="https://img.shields.io/badge/Made%20With-ReactNative-61DAFB?logo=react&style=for-the-badge">
 <img src="https://img.shields.io/badge/Made%20With-Expo-000020?logo=expo&style=for-the-badge">
 
 </p>
@@ -34,7 +34,7 @@ npm install --global expo-cli
 First clone the project.
 
 ```
-git clone https://github.com/BraianMendes/portfolio-advanced_Cryptocurrency-Finance-Price-Tracker-App_React-Next.js.git
+git clone https://github.com/BraianMendes/portfolio-simple_Flappy-Bird_React-Native.git
 ```
 
 Then you need to install the dependencies and after run the application.
