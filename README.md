@@ -41,14 +41,14 @@ Then you need to install the dependencies and after run the application.
 
 ```
 npm install
-npm dev
+npm start
 ```
 
 or
 
 ```
 yarn install
-yarn dev
+yarn start
 ```
 
 The command will start the react app in a expo page in the browser.
